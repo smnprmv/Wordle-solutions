@@ -1,8 +1,9 @@
 date1 = new Date;
 function Solution(x){
-    let date0 = new Date(2021,5,19),
+    let date0 = new Date(2021,5,19,0,0,0,0),
         d0 = new Date(date0),
-        index = Math.round(new Date(x) - d0.setHours(0,0,0,0)/864e5);
+        index = (Math.round(new Date(x).setHours(0,0,0,0) - d0.setHours(0,0,0,0))/864e5);
+        console.log({date0, d0, index})
         console.log(`today's word is "${Wordlist[index]}"`);
         return Wordlist[index];
 }
